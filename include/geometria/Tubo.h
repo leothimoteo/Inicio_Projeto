@@ -2,6 +2,8 @@
 #define TUBO_H
 
 #include <iostream>
+#include <iomanip>
+
 
 typedef double Real;
 
@@ -27,11 +29,17 @@ public:
 //==============================================================================
 //                      construtoras e destrutora
 //==============================================================================     
-    Tubo() : dinterno(0), espessura(0), dexterno(0), comprimento(0), angulo(0) {};
+    Tubo() : dinterno(0), 
+             espessura(0), 
+             dexterno(0), 
+             comprimento(0), 
+             angulo(0) {};
     
     Tubo(const Tubo& _orig): dinterno(_orig.dinterno), 
-        espessura(_orig.espessura), dexterno(_orig.dexterno), 
-        comprimento(_orig.comprimento), angulo(_orig.angulo) {};
+                             espessura(_orig.espessura), 
+                             dexterno(_orig.dexterno), 
+                             comprimento(_orig.comprimento), 
+                             angulo(_orig.angulo) {};
         
     Tubo (const Real& _di, const Real& _esp, const Real& _de, const Real& _comp,
     const Real& _ang) : dinterno(_di), espessura(_esp), dexterno(_de), 
@@ -44,9 +52,9 @@ public:
 //                              FUNÇÕES INLINE
 //============================================================================== 
 
-    inline  const Real DINTERNO()    const   {return dinterno;};    //exibir apenas diÃ¢metro interno      
+    inline  const Real DTubo()    const   {return dinterno;};    //exibir apenas diÃ¢metro interno      
     inline  const Real ESPESSURA()   const   {return espessura;};   //exibir apenas espessura
-    inline  const Real DEXTERNO()    const   {return dexterno;};    //exibir apenas centro  
+    inline  const Real DExterno()    const   {return dexterno;};    //exibir apenas centro  
     inline  const Real COMPRIMENTO() const   {return comprimento;}; //exibir apenas comprimentp
     inline  const Real ANGULO()      const   {return angulo;};      //exibir apenas diÃ¢metro externo
     
@@ -61,7 +69,12 @@ public:
 //                          VARIÃVEIS PRIVADAS
 //==============================================================================    
 private:
-   Real dinterno, espessura, dexterno, comprimento, angulo;
+    
+   Real dinterno, 
+        espessura, 
+        dexterno, 
+        comprimento, 
+        angulo;
 
 };
 
